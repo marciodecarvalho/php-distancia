@@ -13,8 +13,11 @@ echo '<br><hr><br>';
 echo time();
 echo '<br><hr><br>';
 
+/* Abaixo faz calculo para data de um mes, esta formula calcula um mes, 
+ * soma-se 60 segundos veses 60 minutos veses 24 horas veses 30 dias */
+
 $agora = time();
-$prazo = time() + ((60*60*24) * 30); //calculo para data de um mes, esta formula calcula um mes, soma-se 60 segundos veses 60 minutos veses 24 horas veses 30 dias
+$prazo = time() + ((60*60*24) * 30);
 
 // Mostra a data de hoje em segundos
 echo $prazo;
