@@ -5,7 +5,7 @@
 if (!empty($_POST)) {
 
     // Verifica se a variável $_POST['nome'] existe
-    if (isset($_POST['nome']) {
+    if (isset($_POST['nome'])) {
 
         // Verifica se o usuário digitou o seu nome
         if (!empty($_POST['nome'])) {
