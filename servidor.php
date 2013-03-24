@@ -16,14 +16,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.
 mysql_connect(DB_HOST, DB_USER, DB_PASS) or die(mysql_error());
 mysql_select_db(DB_BASE) or die(mysql_error());
 
-/*
-print_r($_SERVER);
- * verifica o nome do host name, se está online ou localhost
- */
-
-// Conectando ao banco de dados
-
-$query = mysql_query('select * from livros');
+$query = mysql_query('select * from livros'); // Conectando ao banco de dados
 $livros = mysql_fetch_array($query);
 
 function consulta_dados($query){
@@ -35,3 +28,7 @@ $query = consulta_dados("select * from livros");
 while ($livros = mysql_fetch_array($query)){
     echo $livros['titulo'] . '<br />';
 }
+/*
+print_r($_SERVER);
+ * verifica o nome do host name, se está online ou localhost
+ */
