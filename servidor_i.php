@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 
 if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1'){
         define ('DB_HOST', 'localhost', true);
@@ -22,15 +23,3 @@ function consulta_dados($query){
     $resultado = mysqli_query($db_link, $query);
     return $resultado;
 }
-
-   $query = consulta_dados("select * from livros");
-
-while ($livros = mysqli_fetch_array($query)){
-    echo $livros['titulo'] . '<br />';
-
-}
-
-/*
-print_r($_SERVER);
- * verifica o nome do host name, se está online ou localhost
- */
